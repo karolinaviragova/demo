@@ -2,7 +2,6 @@ const renderProducts = (products) => {
   const productsContainer = document.getElementById('products-container');
   productsContainer.innerHTML = '';
 
-  console.log(products);
   products.forEach((product) => {
     const card = document.createElement('div');
     card.classList.add('product-card');
@@ -34,7 +33,6 @@ async function getProducts() {
 
     allProducts = await response.json();
     renderProducts(allProducts.slice(0, 4));
-    console.log(allProducts);
   } catch (error) {
     product.textContent = 'Nepodařilo se načíst produkty.';
   }
