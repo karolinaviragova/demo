@@ -1,10 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page__container">
+      <header class="header__container">
+        <div class="header__logo">
+          <p>Logo</p>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <!-- Produkty se musi rozbalit -->
+            <li><a href="#"></a>Produkty</li>
+            <li><a href="/nabidka"></a>Akční nabídka</li>
+            <li><a href="/nas"></a>O nás</li>
+            <li><a href="/kontakt"></a>Kontakt</li>
+          </ul>
+        </nav>
+        <div class="header__search">
+          <form class="search-bar" role="search" action="/search">
+            <input
+              type="search"
+              name="search"
+              placeholder="Napište, co hledáte"
+              aria-label="Vyhledávání"
+            />
+            <button type="submit">
+              <img src="assets/img/search.png" alt="searchIcon" />
+            </button>
+          </form>
+        </div>
+        <div class="header__action">
+          <div class="currency__dropdown">
+            <!-- Mena se musi rozbalit -->
+            <ul>
+              <li>CZK</li>
+            </ul>
+          </div>
+          <div class="header__basket">
+            <a href="/kosik">Košík</a>
+          </div>
+          <div class="header__login">
+            <a href="/login">
+              <img src="assets/img/login.png" alt="loginIcon" />
+            </a>
+          </div>
+        </div>
+        <button class="header__menu">
+          <img src="assets/img/hamburger.png" alt="menuIcon" />
+        </button>
+      </header>
+      <main>
+        <section class="main__billboard">
+          <img src="assets/img/billboard.jpg" alt="billboard coin statues" />
+          <div class="billboard__text">
+            <h2>Tohle je hlavni nadpis</h2>
+            <button class="billboard__btn">Zobrazit</button>
+          </div>
+        </section>
+        <section class="articles">
+          <article class="articleOne">
+            <img
+              src="assets/img/coinrs_one.png"
+              alt="coins image one"
+              class="article__img"
+            />
+            <div class="article__text">
+              <h3>Lorem ipsum one</h3>
+              <button class="article__btn">Nakupuj</button>
+            </div>
+          </article>
+          <article class="articleTwo">
+            <img
+              src="assets/img/coins_two.jpg"
+              alt="coins image two"
+              class="article__img"
+            />
+            <div class="article__text">
+              <h3>Lorem ipsum two</h3>
+              <button class="article__btn">Nakupuj</button>
+            </div>
+          </article>
+          <article class="articleThree">
+            <img
+              src="assets/img/coins_three.jpg"
+              alt="coins image three"
+              class="article__img"
+            />
+            <div class="article__text">
+              <h3>Lorem ipsum three</h3>
+              <button class="article__btn">Nakupuj</button>
+            </div>
+          </article>
+        </section>
+        <div class="tabs">
+          <button id="filterNews" class="tab-btn active">Novinky</button>
+          <button id="filterMostSold" class="tab-btn">Nejprodávanější</button>
+          <button id="filterRec" class="tab-btn">Doporučené</button>
+        </div>
+        <div id="products-container"></div>
+        <div class="tabs__btn">
+          <button class="btn__products">Zobrazit vice produktu</button>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
